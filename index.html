@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PokeDex 90s/2000s — Front-End JS + PokeAPI</title>
+  <meta name="description" content="Pokedex simples usando HTML, CSS e JavaScript puro consumindo a PokeAPI." />
+  <link rel="preconnect" href="https://raw.githubusercontent.com">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <img class="logo" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokébola" />
+      <div class="titles">
+        <h1>PokeDex</h1>
+        <p class="subtitle">Anos 90/2000 • HTML + CSS + JS • PokeAPI</p>
+      </div>
+    </div>
+    <nav class="actions">
+      <a class="gh" href="https://pokeapi.co/" target="_blank" rel="noreferrer">Docs PokeAPI</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="field">
+        <label for="search">Buscar Pokémon</label>
+        <input id="search" type="search" placeholder="Ex.: pikachu, charizard..." autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="typeFilter">Filtrar por tipo</label>
+        <select id="typeFilter">
+          <option value="">Todos os tipos</option>
+        </select>
+      </div>
+      <div class="field">
+        <button id="clearBtn" class="btn secondary" type="button" title="Limpar filtros">Limpar</button>
+      </div>
+    </section>
+
+    <section id="cards" class="grid" aria-live="polite"></section>
+
+    <div class="pagination">
+      <button id="loadMore" class="btn" type="button">Carregar mais</button>
+    </div>
+  </main>
+
+  <template id="card-template">
+    <article class="card" tabindex="0" role="article">
+      <div class="thumb-wrap">
+        <img class="thumb" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="meta">
+        <h3 class="name"></h3>
+        <p class="id"></p>
+        <div class="badges"></div>
+      </div>
+    </article>
+  </template>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer class="site-footer">
+    <p>Construído com <b>Fetch API</b>, manipulação de <b>DOM</b> e PokeAPI — sem frameworks.</p>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
