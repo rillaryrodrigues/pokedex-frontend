@@ -1,21 +1,50 @@
-# PokeDex — Projeto Front-End (HTML + CSS + JS)
+🧩 Pokédex – Front-End com HTML, CSS e JavaScript
 
-Projeto estático consumindo **[PokeAPI](https://pokeapi.co/)** com **Fetch API** e **manipulação do DOM** (createElement, appendChild, etc.).
-Atende os requisitos de:
-- HTML + CSS puro (sem frameworks)
-- JavaScript com `fetch`
-- Cards gerados dinamicamente (nome, imagem, status/descrição — aqui: tipos e stats)
+Projeto desenvolvido como desafio de front-end, com o objetivo de consumir dados em tempo real da PokeAPI
+ e exibir personagens de Pokémon dos anos 90 e 2000 em cards dinâmicos.
 
-## Como rodar
-1. Baixe o ZIP ou clone os arquivos.
-2. Abra `index.html` no navegador. (Se der problema de CORS em alguns navegadores, use uma extensão de *Live Server* ou rode `python -m http.server` na pasta e acesse `http://localhost:8000`.)
+💡 Tecnologias Utilizadas
 
-## Estrutura
-- `index.html` — marcação e componentes principais
-- `styles.css` — layout responsivo e tema
-- `app.js` — consumo da API e criação dinâmica dos cards
+HTML5: estrutura semântica e acessível
 
-## Expansões sugeridas
-- Modal com detalhes (habilidades, movimentos, evolução)
-- Paginação/infinite scroll
-- Cache em `localStorage` e *retry* com *exponential backoff*
+CSS3: layout responsivo, tema dark e design inspirado nos anos 2000
+
+JavaScript (Fetch API): consumo da API, manipulação do DOM e criação dinâmica de elementos
+
+⚙️ Funcionalidades
+
+Listagem automática de Pokémons com paginação
+
+Busca por nome e filtro por tipo
+
+Cards dinâmicos com nome, imagem e atributos principais (HP, ATK, DEF)
+
+Skeleton loading e feedback de status (toast)
+
+Interface 100% estática (sem frameworks)
+
+🚀 Como executar
+
+Baixe o repositório ou clone:
+
+git clone https://github.com/<seu-usuario>/pokedex-frontend.git
+cd pokedex-frontend
+
+
+Abra o arquivo index.html no navegador
+ou rode um servidor local:
+
+python -m http.server
+
+
+Acesse http://localhost:8000
+
+🧠 Aprendizados
+
+Manipulação de DOM com createElement e appendChild
+
+Uso do fetch para consumo de APIs REST
+
+Organização de código front-end sem frameworks
+
+Design responsivo com CSS puro
